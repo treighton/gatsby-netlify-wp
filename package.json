@@ -4,17 +4,18 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "gatsby": "^1.9.277",
     "gatsby-image": "next",
+    "gatsby-link": "^1.6.46",
     "gatsby-plugin-glamor": "next",
+    "gatsby-plugin-netlify": "^1.0.21",
+    "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-sharp": "next",
     "gatsby-plugin-typography": "next",
+    "gatsby-source-wordpress": "^2.0.93",
     "gatsby-transformer-sharp": "next",
     "glamor": "^2.20.40",
     "lodash": "^4.17.10",
-    "gatsby": "^1.9.277",
-    "gatsby-link": "^1.6.46",
-    "gatsby-plugin-react-helmet": "^2.0.11",
-    "gatsby-source-wordpress": "^2.0.93",
     "react-helmet": "^5.2.0"
   },
   "keywords": [

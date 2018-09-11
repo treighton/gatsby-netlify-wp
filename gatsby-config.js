@@ -29,5 +29,6 @@ module.exports = {
         useACF: true,
       },
     },
+    `gatsby-plugin-netlify`,
   ],
 }
