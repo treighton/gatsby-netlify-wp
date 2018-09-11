@@ -6,9 +6,9 @@ export default ({ data }) => {
     <div>
       <h1>My WordPress Blog</h1>
       <h4>Posts</h4>
-      {data.allWordpressPost.edges.map(({ node }) => (
+      {data.allWordpressWpNews.edges.map(({ node }) => (
         <div key={node.slug}>
-          <Link to={`posts/${node.slug}`}>
+          <Link to={`news/${node.slug}`}>
             <h3>{node.title}</h3>
           </Link>
           <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
@@ -20,12 +20,15 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query MyFiles {
-    allWordpressPost(sort: { fields: [date] }) {
+    allWordpressWpNews {
       edges {
         node {
           title
-          excerpt
           slug
+          content
+          acf {
+            customshit
+          }
         }
       }
     }

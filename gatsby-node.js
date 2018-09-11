@@ -13,6 +13,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
         }
+        allWordpressWpNews {
+          edges {
+            node {
+              title
+              slug
+              content
+              acf {
+                customshit
+              }
+            }
+          }
+        }
       }
     `).then(result => {
       if (result.errors) {
@@ -24,6 +36,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         createPage({
           path: `posts/${node.slug}`,
           component: path.resolve(`./src/templates/post.js`),
+          context: {
+            slug: node.slug,
+          },
+        })
+      })
+      result.data.allWordpressWpNews.edges.forEach(({ node }) => {
+        createPage({
+          path: `news/${node.slug}`,
+          component: path.resolve(`./src/templates/news.js`),
           context: {
             slug: node.slug,
           },
