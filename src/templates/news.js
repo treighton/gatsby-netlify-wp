@@ -6,6 +6,7 @@ class NewsTemplate extends Component {
     console.log(this.props)
     return (
       <div>
+        <h1>{}</h1>
         <h1>{currentPage.acf.customshit}</h1>
         <div dangerouslySetInnerHTML={{ __html: currentPage.content }} />
       </div>
